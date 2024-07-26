@@ -26,6 +26,10 @@ class MainActivity : ComponentActivity() {
 }
 
 class SmartDevice{
+    val name = "android Tv"
+    val category = "Enterainment"
+    var deviceStatus = "online"
+
     fun turnOn(){
         println("Smart device is turned on.")
     }
@@ -36,6 +40,7 @@ class SmartDevice{
 
 fun main(){
     val smartTvDevice =SmartDevice()
+    println("device name is : ${smartTvDevice.name}")
     smartTvDevice.turnOn()
     smartTvDevice.turnOff()
 }
