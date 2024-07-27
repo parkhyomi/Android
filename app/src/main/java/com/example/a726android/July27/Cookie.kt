@@ -60,6 +60,9 @@ fun main() {
     val totalPrice = cookies.fold(0.0){
         total,cookie -> total+cookie.price
     }
+    val alphabeticalMenu = cookies.sortedBy {
+        it.name
+    }
     println("soft cookies:")
     softBakedMenu.forEach{
         println("${it.name}-$${it.price}")
@@ -69,4 +72,8 @@ fun main() {
         println("${it.name}-$${it.price}")
     }
     println("\n total price : $${totalPrice}")
+    println("\nAlphabetical menu:")
+    alphabeticalMenu.forEach{
+        println(it.name)
+    }
 }
