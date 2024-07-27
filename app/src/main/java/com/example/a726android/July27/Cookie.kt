@@ -1,5 +1,7 @@
 package com.example.a726android.July27
 
+import androidx.compose.runtime.currentComposer
+
 class Cookie(
     val name: String,
     val softBaked: Boolean,
@@ -52,11 +54,16 @@ val cookies = listOf(
     )
 )
 fun main() {
-    val softBakedMenu = cookies.filter {
-       it.softBaked
-    }
+    val groupedMenu = cookies.groupBy { it.softBaked }
+    val softBakedMenu = groupedMenu[true] ?: listOf()
+    val crunchyMenu =groupedMenu[false] ?: listOf()
+
     println("soft cookies:")
-    softBakedMenu.forEach {
+    softBakedMenu.forEach{
+        println("${it.name}-$${it.price}")
+    }
+    println("\ncrunchy cookies:")
+    crunchyMenu.forEach{
         println("${it.name}-$${it.price}")
     }
 }
