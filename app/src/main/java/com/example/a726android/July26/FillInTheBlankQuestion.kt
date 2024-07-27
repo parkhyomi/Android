@@ -1,4 +1,4 @@
-package com.example.a726android
+package com.example.a726android.July26
 
 class FillInTheBlankQuestion (
     val questionText:String,
@@ -27,9 +27,9 @@ data class Question<T>(
 )
 
 fun main(){
-    val question1 = Question<String>("Quoth the raven___","nevermore",Difficulty.MEDIUM)
-    val question2 = Question<Boolean>("The sky is green",false,Difficulty.EASY)
-    val question3 = Question<Int>("How many days are there",28,Difficulty.HARD)
+    val question1 = Question<String>("Quoth the raven___","nevermore", Difficulty.MEDIUM)
+    val question2 = Question<Boolean>("The sky is green",false, Difficulty.EASY)
+    val question3 = Question<Int>("How many days are there",28, Difficulty.HARD)
     println(question1.toString())
     println(question2.toString())
     println(question3.toString())

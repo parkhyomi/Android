@@ -1,4 +1,4 @@
-package com.example.a726android
+package com.example.a726android.July26
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
